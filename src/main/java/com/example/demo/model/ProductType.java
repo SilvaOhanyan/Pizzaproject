@@ -2,11 +2,11 @@ package com.example.demo.model;
 
 import java.util.Objects;
 
-public class productType {
+public class ProductType {
     private int id;
     private String name;
 
-    public productType() {
+    public ProductType() {
     }
 
     public int getId() {
@@ -29,7 +29,7 @@ public class productType {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        productType that = (productType) o;
+        ProductType that = (ProductType) o;
         return id == that.id && name.equals(that.name);
     }
 

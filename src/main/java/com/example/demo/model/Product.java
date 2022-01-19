@@ -3,7 +3,7 @@ package com.example.demo.model;
 import java.util.List;
 import java.util.Objects;
 
-public class product {
+public class Product {
     private int id;
     private int productTypeId;
     private String name;
@@ -11,10 +11,10 @@ public class product {
     private String img;
     private List<Integer> ingredientsIdList;
 
-    public product() {
+    public Product() {
     }
 
-    public product(int id, int productTypeId, String name, float price, String img, List<Integer> ingredientsIdList) {
+    public Product(int id, int productTypeId, String name, float price, String img, List<Integer> ingredientsIdList) {
         this.id = id;
         this.productTypeId = productTypeId;
         this.name = name;
@@ -75,7 +75,7 @@ public class product {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        product product = (product) o;
+        Product product = (Product) o;
         return id == product.id && productTypeId == product.productTypeId && Float.compare(product.price, price) == 0 && name.equals(product.name) && img.equals(product.img) && ingredientsIdList.equals(product.ingredientsIdList);
     }
 

@@ -3,19 +3,25 @@ package com.example.demo.model;
 import java.util.Objects;
 
 public class Ingredient {
-    private int id;
+    private int Id;
     private String name;
     private boolean editable;
 
     public Ingredient() {
     }
 
+    public Ingredient(int id, String name, boolean editable) {
+        Id = id;
+        this.name = name;
+        this.editable = editable;
+    }
+
     public int getId() {
-        return id;
+        return Id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        Id = id;
     }
 
     public String getName() {
@@ -39,21 +45,20 @@ public class Ingredient {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ingredient that = (Ingredient) o;
-        return id == that.id && editable == that.editable && Objects.equals(name, that.name);
+        return Id == that.Id && editable == that.editable && name.equals(that.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, editable);
+        return Objects.hash(Id, name, editable);
     }
 
     @Override
     public String toString() {
         return "Ingredient{" +
-                "id=" + id +
+                "Id=" + Id +
                 ", name='" + name + '\'' +
                 ", editable=" + editable +
                 '}';
     }
 }
-
